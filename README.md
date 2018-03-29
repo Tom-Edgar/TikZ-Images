@@ -26,9 +26,9 @@ In this repository, we will include code for creating certain TikZ images that h
 
 ****
 
-![](./src/highlightedmatrix.png)
-
 # A Highlighted Matrix
+
+![](./src/highlightedmatrix.png)
 
 ```tex
 
@@ -60,9 +60,9 @@ In this repository, we will include code for creating certain TikZ images that h
 
 ****
 
-![](./src/lightbulbs.png)
-
 # Some Lightbulbs
+
+![](./src/lightbulbs.png)
 
 ```tex
 
