@@ -26,7 +26,7 @@ In this repository, we will include code for creating certain TikZ images that h
 
 ****
 
-![](./src/highlightmatrix.png)
+![](./src/highlightedmatrix.png)
 
 # A Highlighted Matrix
 
