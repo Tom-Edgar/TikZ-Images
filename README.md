@@ -236,3 +236,97 @@ color=lightyellow] (2,2) arc (-60:240:2cm);
 
 ```
 
+****
+
+# Base 3/2 Tree
+
+![](./src/base32tree.png)
+
+
+```tex
+\usetikzlibrary{shapes.geometric}
+\begin{tikzpicture}
+[every node/.style={inner sep=0pt}]
+\node (0) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (200.0pt, 28pt) {\textcolor{black}{0}};
+\node (1) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (200.0pt, -12.5pt) {\textcolor{black}{3}};
+\node (2) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (200.0pt, -50.0pt) {\textcolor{black}{6}};
+\node (3) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (137.5pt, -100.0pt) {\textcolor{black}{9}};
+\node (4) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (262.5pt, -100.0pt) {\textcolor{black}{12}};
+\node (5) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (100.0pt, -150.0pt) {\textcolor{black}{15}};
+\node (6) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (312.5pt, -150.0pt) {\textcolor{black}{21}};
+\node (7) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (212.5pt, -150.0pt) {\textcolor{black}{18}};
+\node (8) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (62.5pt, -200.0pt) {\textcolor{black}{24}};
+\node (9) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (262.5pt, -200.0pt) {\textcolor{black}{30}};
+\node (10) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (162.5pt, -200.0pt) {\textcolor{black}{27}};
+\node (11) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (362.5pt, -200.0pt) {\textcolor{black}{33}};
+\node (12) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (25.0pt, -250.0pt) {\textcolor{black}{36}};
+\node (13) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (100.0pt, -250.0pt) {\textcolor{black}{39}};
+\node (14) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (162.5pt, -250.0pt) {\textcolor{black}{42}};
+\node (15) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (225.0pt, -250.0pt) {\textcolor{black}{45}};
+\node (16) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (300.0pt, -250.0pt) {\textcolor{black}{48}};
+\node (17) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (400.0pt, -250.0pt) {\textcolor{black}{51}};
+\node (18) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (12.5pt, -300.0pt) {\textcolor{black}{54}};
+\node (19) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (50.0pt, -300.0pt) {\textcolor{black}{57}};
+\node (20) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (100.0pt, -300.0pt) {\textcolor{black}{60}};
+\node (21) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (137.5pt, -300.0pt) {\textcolor{black}{63}};
+\node (22) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (187.5pt, -300.0pt) {\textcolor{black}{66}};
+\node (23) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (225.0pt, -300.0pt) {\textcolor{black}{69}};
+\node (24) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (275.0pt, -300.0pt) {\textcolor{black}{72}};
+\node (25) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (325.0pt, -300.0pt) {\textcolor{black}{75}};
+\node (26) [circle, minimum size=12.5pt, fill=teal, line width=0.625pt, draw=black] at (412.5pt, -300.0pt) {\textcolor{black}{78}};
+\draw [line width=0.625, color=red] (0) to  (1);
+\draw [line width=0.625, color=red] (1) to  (2);
+\draw [line width=0.625, color=black] (2) to  (3);
+\draw [line width=0.625, color=red] (2) to  (4);
+\draw [line width=0.625, color=black] (3) to  (5);
+\draw [line width=0.625, color=red] (4) to  (7);
+\draw [line width=0.625, color=black] (4) to  (6);
+\draw [line width=0.625, color=black] (5) to  (8);
+\draw [line width=0.625, color=red] (7) to  (10);
+\draw [line width=0.625, color=black] (7) to  (9);
+\draw [line width=0.625, color=black] (6) to  (11);
+\draw [line width=0.625, color=black] (8) to  (12);
+\draw [line width=0.625, color=black] (8) to  (13);
+\draw [line width=0.625, color=red] (10) to  (14);
+\draw [line width=0.625, color=black] (9) to  (15);
+\draw [line width=0.625, color=black] (9) to  (16);
+\draw [line width=0.625, color=black] (11) to  (17);
+\draw [line width=0.625, color=black] (12) to  (18);
+\draw [line width=0.625, color=black] (12) to  (19);
+\draw [line width=0.625, color=black] (13) to  (20);
+\draw [line width=0.625, color=red] (14) to  (21);
+\draw [line width=0.625, color=black] (14) to  (22);
+\draw [line width=0.625, color=black] (15) to  (23);
+\draw [line width=0.625, color=black] (16) to  (24);
+\draw [line width=0.625, color=black] (16) to  (25);
+\draw [line width=0.625, color=black] (17) to  (26);
+\node at (206.25pt, 10pt) {\textcolor{black}{2}};
+\node at (206.25pt, -35.625pt) {\textcolor{black}{1}};
+\node at (167.5pt, -64.375pt)  {\textcolor{black}{0}};
+\node at (232.5pt, -65.0pt) [rotate=0] {\textcolor{black}{2}};
+\node at (113.75pt, -116.875pt) [rotate=0] {\textcolor{black}{1}};
+\node at (230.625pt, -119.375pt) [rotate=0] {\textcolor{black}{0}};
+\node at (290.625pt, -115.625pt) [rotate=0] {\textcolor{black}{2}};
+\node at (75.0pt, -168.75pt) [rotate=0] {\textcolor{black}{1}};
+\node at (183.125pt, -166.875pt) [rotate=0] {\textcolor{black}{0}};
+\node at (244.375pt, -169.375pt) [rotate=0] {\textcolor{black}{2}};
+\node at (340.625pt, -165.625pt) [rotate=0] {\textcolor{black}{1}};
+\node at (36.25pt, -219.375pt) [rotate=0] {\textcolor{black}{0}};
+\node at (88.75pt, -220.625pt) [rotate=0] {\textcolor{black}{2}};
+\node at (168.75pt, -227.5pt) {\textcolor{black}{1}};
+\node at (236.25pt, -220.0pt) [rotate=0] {\textcolor{black}{0}};
+\node at (287.5pt, -218.75pt) [rotate=0] {\textcolor{black}{2}};
+\node at (389.375pt, -221.25pt) [rotate=0] {\textcolor{black}{1}};
+\node at (10.0pt, -272.5pt) [rotate=0] {\textcolor{black}{0}};
+\node at (46.25pt, -272.5pt) [rotate=0] {\textcolor{black}{2}};
+\node at (106.25pt, -275.0pt) {\textcolor{black}{1}};
+\node at (141.875pt, -270.625pt) [rotate=0] {\textcolor{black}{0}};
+\node at (183.125pt, -272.5pt) [rotate=0] {\textcolor{black}{2}};
+\node at (231.25pt, -273.125pt) {\textcolor{black}{1}};
+\node at (278.75pt, -271.875pt) [rotate=0] {\textcolor{black}{0}};
+\node at (322.5pt, -275.625pt) [rotate=0] {\textcolor{black}{2}};
+\node at (415pt, -275.625pt) [rotate=0] {\textcolor{black}{1}};
+\end{tikzpicture}
+
+
+```
