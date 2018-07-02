@@ -331,4 +331,87 @@ color=lightyellow] (2,2) arc (-60:240:2cm);
 
 ```
 
+****
+
+# The Fano Plane
+
+![](./src/fano.png)
+
+```tex
+\begin{tikzpicture}[scale=1.5]
+  \draw (30:1)  -- (210:2)
+        (150:1) -- (330:2)
+        (270:1) -- (90:2)
+        (90:2)  -- (210:2) -- (330:2) -- cycle
+        (0:0)   circle (1);
+  \fill (0:0)   circle(3pt)
+        (30:1)  circle(3pt)
+        (90:2)  circle(3pt)
+        (150:1) circle(3pt)
+        (210:2) circle(3pt)
+        (270:1) circle(3pt)
+        (330:2) circle(3pt);
+
+        \node[] at (0,2.3) {1};
+        \node[] at (-1.05,.65) {2};
+        \node[] at (1.05,.65) {4};
+        \node[] at (.3,0) {7};
+        \node[] at (0,-1.3) {6};
+        \node[] at (-1.85,-1.2) {3};
+        \node[] at (1.85,-1.2) {5};
+\end{tikzpicture}
+
+```
+
+****
+
+# An Alternate Drawing of the Fano Plane
+
+![](./src/fano-alt.png)
+
+
+```tex
+\definecolor{ggreen}{rgb}{0.53, 0.66, 0.42}
+\definecolor{yyellow}{rgb}{1.0, 0.96, 0.0}
+
+
+\begin{tikzpicture}
+
+\draw[black] (0,0) circle (2in);
+
+\draw[fill=black] (-30:2in) circle (3pt);
+
+\draw[fill=black] (210:2in) circle (3pt);
+
+\draw[fill=black] (90:2in) circle (3pt);
+
+\draw[fill=black] (0,0) circle (3pt);
+
+\draw[fill=black] (30:1in) circle (3pt);
+
+\draw[fill=black] (150:1in) circle (3pt);
+
+\draw[fill=black] (-90:1in) circle (3pt);
+
+\draw[ggreen] (-30:2in) -- (0,0) -- (150:1in);
+
+\draw[brown] (30:1in) -- (0,0) -- (210:2in);
+
+\draw[orange] (90:2in) -- (0,0) -- (-90:1in);
+
+\draw[blue] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0] (30:1in);
+
+\begin{scope}[rotate=120]
+\draw[red] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0] (30:1in);
+\end{scope}
+
+\begin{scope}[rotate=240]
+\draw[magenta] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0] (30:1in);
+\end{scope}
+\end{tikzpicture}
+
+
+```
+
+
 Some PWWs will come here
