@@ -333,6 +333,38 @@ color=lightyellow] (2,2) arc (-60:240:2cm);
 
 ****
 
+# The Fano Plane
+
+![](./src/fano.png)
+
+```tex
+\begin{tikzpicture}[scale=1.5]
+  \draw (30:1)  -- (210:2)
+        (150:1) -- (330:2)
+        (270:1) -- (90:2)
+        (90:2)  -- (210:2) -- (330:2) -- cycle
+        (0:0)   circle (1);
+  \fill (0:0)   circle(3pt)
+        (30:1)  circle(3pt)
+        (90:2)  circle(3pt)
+        (150:1) circle(3pt)
+        (210:2) circle(3pt)
+        (270:1) circle(3pt)
+        (330:2) circle(3pt);
+
+        \node[] at (0,2.3) {1};
+        \node[] at (-1.05,.65) {2};
+        \node[] at (1.05,.65) {4};
+        \node[] at (.3,0) {7};
+        \node[] at (0,-1.3) {6};
+        \node[] at (-1.85,-1.2) {3};
+        \node[] at (1.85,-1.2) {5};
+\end{tikzpicture}
+
+```
+
+****
+
 # An Alternate Drawing of the Fano Plane
 
 ![](./src/fano-alt.png)
